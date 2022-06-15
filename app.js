@@ -31,6 +31,7 @@ function submitFunction() {
     lastCard.classList.remove('hidden');
     const rating = document.querySelector('.rating')
     rating.textContent = `You selected ${rate} out of 5`;
+    Array.from( document.querySelectorAll('input[name="rate"]:checked'), input => input.checked = false );
     setTimeout(()=>{
         window.location.reload();
     }, 3000);
